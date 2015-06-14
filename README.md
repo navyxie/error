@@ -1,0 +1,2 @@
+对于跨域的JS资源，window.onerror拿不到详细的信息，需要往资源的请求的响应头添加额外的头部。
+eg:Respone Header:"Access-Control-Allow-Origin:http://www.xxx.com"头部，同时script引入外链的标签需要加多一个crossorigin的属性（<script src="xx.js" crossorigin></script>）。这样才能获取到准确的出错信息。
